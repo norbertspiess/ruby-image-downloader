@@ -1,7 +1,7 @@
-require_relative '../../lib/helper/downloader'
+require_relative '../../lib/helper/download'
 require 'fakefs'
 
-describe Downloader do
+describe Download do
   before do
     FakeFS.activate!
   end
@@ -12,5 +12,7 @@ describe Downloader do
 
   describe ".single_download" do
     # hm...
+    # played around with double(), expect and more.
+    # Couldn't get it to work to mock the file open() nor the url open().
   end
 end
